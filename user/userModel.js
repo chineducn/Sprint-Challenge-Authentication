@@ -11,6 +11,7 @@ function addUser(userDetails) {
         .then(idArray => {
             return db('users')
                 .where({ id: idArray[0] })
+                .select('id', 'username')
                 .first()
         })
 }
