@@ -1,7 +1,6 @@
 const server = require('../api/server')
 const request = require('supertest')
 const db = require('../database/dbConfig');
-const User = require('./auth-router')
 
 beforeEach(() => {
   return db('users').truncate();
