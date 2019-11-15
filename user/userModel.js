@@ -16,5 +16,7 @@ function addUser(userDetails) {
 }
 
 function findByUsername(username) {
-
+    return db('users')
+        .where({ username })
+        .first()
 }
