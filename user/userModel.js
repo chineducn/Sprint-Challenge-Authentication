@@ -6,7 +6,13 @@ module.exports = {
 }
 
 function addUser(userDetails) {
- return db('users').insert(userDetails)
+    return db('users')
+        .insert(userDetails)
+        .then(idArray => {
+            return db('users')
+                .where({ id: idArray[0] })
+                .first()
+        })
 }
 
 function findByUsername(username) {

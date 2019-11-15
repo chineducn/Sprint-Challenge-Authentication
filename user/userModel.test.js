@@ -14,9 +14,15 @@ describe('user model', () => {
 
             expect(users.length).toBe(1);
             expect(users[0].username).toBe('Mike')
+            expect(users[0].password).toBe('1234')
         })
 
-        
+        it('resolves to the new user', async () => {
+            const newUser = { username: 'Mike', password: '1234' }
+            const user = await User.addUser(newUser)
+
+            expect(user).toEqual({ id: 1, username: 'Mike', password: '1234'})
+        })
     })
 })
 
