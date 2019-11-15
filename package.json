@@ -9,7 +9,7 @@
     "test": "cross-env DB_ENV=testing jest --watchAll"
   },
   "jest": {
-    "testEnvirnoment": "node"
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
