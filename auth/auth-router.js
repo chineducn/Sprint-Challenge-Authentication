@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const generateToken = require('./generateToken')
 
 router.post('/register', (req, res) => {
   // implement registration
